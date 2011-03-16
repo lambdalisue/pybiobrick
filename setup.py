@@ -8,7 +8,7 @@ from distutils.core import setup
 
 setup(
     name='pybiobrick',
-    version='0.1',
+    version='0.11',
     description="Generate BioBrick sequence image eps file from XML/String formatted sequence.",
     author="Alisue",
     author_email="alisue@hashnote.tk",

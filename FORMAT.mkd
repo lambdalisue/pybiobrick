@@ -7,6 +7,7 @@ You can use the types below. It is experimental so doesn't cover all type of par
 + `protein_coding_sequence`
 + `translational_unit`
 + `terminator`
++ `signal_sequence`
 
 # XML Format
 See sample/GFP.xml file.
@@ -19,6 +20,7 @@ See sample/GFP.xml file.
 + protein_coding_sequence => `== LABEL =>`
 + translational_unit => `() LABEL =>`
 + terminator => `<< LABEL >>`
++ signal_sequence => `[ LABEL ]`
 
 Write like below
 	
