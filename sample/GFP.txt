@@ -1,0 +1,1 @@
+[[ Arabinose promoter >> (RBS) ==GFP=> <<Terminator>>

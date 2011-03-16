@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<sequence>
+		<brick>
+			<type>promoter</type>
+			<label>Arabinose promoter</label>
+		</brick>
+		<brick>
+			<type>ribosome_binding_site</type>
+			<label>RBS</label>
+		</brick>
+		<brick>
+			<type>protein_coding_sequence</type>
+			<label>GFP</label>
+		</brick>
+		<brick>
+			<type>terminator</type>
+			<label>Terminator</label>
+		</brick>
+	</sequence>
+</root>
