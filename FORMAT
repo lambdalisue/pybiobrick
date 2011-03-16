@@ -1,0 +1,27 @@
+# Types
+You can use the types below. It is experimental so doesn't cover all type of parts.
+
++ `promoter`
++ `ribosome_binding_site`
++ `protein_domain`
++ `protein_coding_sequence`
++ `translational_unit`
++ `terminator`
+
+# XML Format
+See sample/GFP.xml file.
+
+# String Format
+
++ promoter => `[[ LABEL >>`
++ ribosome_binding_site => `( LABEL )`
++ protein_domain => `** LABEL *>`
++ protein_coding_sequence => `== LABEL =>`
++ translational_unit => `() LABEL =>`
++ terminator => `<< LABEL >>`
+
+Write like below
+	
+	[[Promoter>> (RBS) ==GFP=> <<Terminator>>
+
+
