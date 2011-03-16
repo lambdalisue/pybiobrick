@@ -1,0 +1,29 @@
+pybiobrick=/home/alisue/Dropbox/iGEM/pybiobrick CD=. filter="*.py" {
+ pybiobrick=pybiobrick{
+   __init__.py
+  bin=bin{
+   pybiobrick
+  }
+  bricks=bricks{
+   __init__.py
+   promoter.py
+   protein_coding_sequence.py
+   protein_domain.py
+   ribosome_binding_site.py
+   terminator.py
+   translational_unit.py
+  }
+  parser=parser{
+   __init__.py
+   strparser.py
+   xmlparser.py
+  }
+  utils=utils{
+   __init__.py
+   bricks.py
+   sequence.py
+  }
+ }
+ main.py
+ setup.py
+}
