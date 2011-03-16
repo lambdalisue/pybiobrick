@@ -11,7 +11,7 @@ BRANKET_TABLE = (
     ('[[',  '>>',   'promoter'),
     ('(',   ')',    'ribosome_binding_site'),
     ('==',  '=>',   'protein_coding_sequence'),
-    ('=-',  '->',   'protein_domain'),
+    ('**',  '*>',   'protein_domain'),
     ('()',  '=>',   'translational_unit'),
     ('<<',  '>>',   'terminator'),
 )
