@@ -1,0 +1,22 @@
+What's this
+=================================================
+This is for generating BioBrick Sequence Image[^1] from XML or formatted string.
+
+Install
+=================================================
+You need `git` and `pip` or `easy_install` for installing.
+See <http://pypi.python.org/pypi/pip> to more information about `pip`
+
+Install with the command below
+
+	$ git clone git://github.com/alisue/pybiobrick.git
+	$ sudo pip install pybiobrick
+
+How to use
+=================================================
+Try the command below, it will create GFP.eps file in working directory
+
+	$ pybiobrick "[[Arabinose promoter>> (RBS) ==GFP=> <<Terminator>>"
+
+
+[^1]:	Like <http://2010.igem.org/wiki/images/d/d5/HokkaidoU_Japan_Fig5.jpg>
