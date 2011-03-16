@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #
 # Author:       Alisue
-# Last Change:  16-Mar-2011.
+# Last Change:  17-Mar-2011.
 #
 import pyx
 from optparse import OptionParser
@@ -10,7 +10,7 @@ from pybiobrick.utils import sequence
 from pybiobrick.parser import xmlparser
 from pybiobrick.parser import strparser
 
-DEBUG = True
+DEBUG = False
 
 if __name__ == '__main__':
     usage = "usage: %prog [options] [buffer]"
