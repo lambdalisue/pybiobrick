@@ -1,9 +1,6 @@
 pybiobrick=/home/alisue/Dropbox/iGEM/pybiobrick CD=. filter="*.py" {
  pybiobrick=pybiobrick{
-   __init__.py
-  bin=bin{
-   pybiobrick
-  }
+  __init__.py
   bricks=bricks{
    __init__.py
    promoter.py
@@ -12,6 +9,7 @@ pybiobrick=/home/alisue/Dropbox/iGEM/pybiobrick CD=. filter="*.py" {
    ribosome_binding_site.py
    terminator.py
    translational_unit.py
+   signal_sequence.py
   }
   parser=parser{
    __init__.py
@@ -22,8 +20,9 @@ pybiobrick=/home/alisue/Dropbox/iGEM/pybiobrick CD=. filter="*.py" {
    __init__.py
    bricks.py
    sequence.py
+   color.py
   }
  }
- main.py
  setup.py
+ main.py
 }

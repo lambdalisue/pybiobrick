@@ -16,11 +16,11 @@ class ProteinCodingSequence(Brick):
     _offset = (0, -0.5)
     _path = path(
         moveto(0, 0),
-        lineto(4, 0),
-        lineto(4, -0.5),
-        lineto(4+sqrt(3), 0.5),
-        lineto(4, 1.5),
-        lineto(4, 1),
+        lineto(3, 0),
+        lineto(3, -0.5),
+        lineto(3+sqrt(3), 0.5),
+        lineto(3, 1.5),
+        lineto(3, 1),
         lineto(0, 1),
         lineto(0, 0),
         closepath()

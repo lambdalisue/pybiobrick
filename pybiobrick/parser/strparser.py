@@ -14,12 +14,13 @@ BRANKET_TABLE = (
     ('**',  '*>',   'protein_domain'),
     ('()',  '=>',   'translational_unit'),
     ('<<',  '>>',   'terminator'),
+    ('[',   ']',    'signal_sequence'),
 )
 PATTERN = re.compile(r"""
     \s*
     (?P<prefix>[^a-zA-Z0-9\-\{\}\\\s]+)     # Prefix operator
     \s*
-    (?P<label>[a-zA-Z0-9\-\{\}\\\s#]*)       # Label
+    (?P<label>[a-zA-Z0-9\-\{\}\\\s:#]*)       # Label
     \s*
     (?P<suffix>[^a-zA-Z0-9\-\{\}\\\s]+)     # Suffix operator
     \s*
@@ -37,8 +38,8 @@ def parse(string):
     for m in PATTERN.finditer(string):
         prefix = m.group('prefix')
         label = m.group('label')
-        if '#' in label:
-            label, color = label.split('#', 1)
+        if ':' in label:
+            label, color = label.split(':', 1)
         else:
             color = None
         suffix = m.group('suffix')

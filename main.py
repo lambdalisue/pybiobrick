@@ -10,6 +10,8 @@ from pybiobrick.utils import sequence
 from pybiobrick.parser import xmlparser
 from pybiobrick.parser import strparser
 
+DEBUG = True
+
 if __name__ == '__main__':
     usage = "usage: %prog [options] [buffer]"
     version = "%prog 0.1"
@@ -27,6 +29,9 @@ if __name__ == '__main__':
         buf = open(opts.filename, 'r')
     elif len(args) >= 1:
         buf = args[0]
+    elif DEBUG:
+        opts.format = 'string'
+        buf = "[[Promoter>> (RBS) [Signal sequence] ==Protein Coding Sequence=> **Protein Domain*> ()Translational Unit=> <<Terminator>>"
     else:
         parser.print_help()
         exit(0)

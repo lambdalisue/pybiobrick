@@ -17,7 +17,7 @@ class RibosomeBindingSite(Brick):
     def __init__(self, label, color=None):
         super(RibosomeBindingSite, self).__init__(label, color)
         c = circle(1, 1, 1)
-        c = c.transformed(trafo.scale(sx=2, sy=0.8))
+        c = c.transformed(trafo.scale(sx=1.5, sy=0.8))
         self._path = c
 
 brick_class = RibosomeBindingSite

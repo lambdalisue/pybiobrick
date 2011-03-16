@@ -5,6 +5,7 @@
 # Last Change:  16-Mar-2011.
 #
 import pyx
+from ..utils.color import get as c
 
 TEXT_Y_OFFSET = 1.7
 TEXT_FONT_SIZE = pyx.text.size.LARGE
@@ -13,14 +14,15 @@ class Brick(object):
     u"""Base class of BioBrick"""
     
     # Default color
-    _default_color = pyx.color.cmyk.Black
+    _default_color = c(r"#00ff00") 
+    _default_stroke = c("#000000")
 
     # Brick relative offset (for regulate offset)
     _offset = (0, 0)
     # Text relative offset (for regulate offset)
     _text_offset = (0, 0)
 
-    def __init__(self, label, color=None):
+    def __init__(self, label, color=None, stroke=None):
         u"""Constructor of the class
 
         Arguments:
@@ -28,11 +30,8 @@ class Brick(object):
             color   - the name of color or pyx.color instance. ref http://pyx.sourceforge.net/manual/colorname.html#colorname
         """
         self.label = label
-        if color is None:
-            color = self._default_color
-        elif isinstance(color, basestring):
-            color = getattr(pyx.color.cmyk, color)
-        self.color = color
+        self.color = c(color) or self._default_color
+        self.stroke = c(stroke) or self._default_stroke
 
     def _text_width(self):
         if not self.label:
@@ -70,7 +69,9 @@ class Brick(object):
         y = self._offset[1]
         path = self._path.transformed(pyx.trafo.translate(x, y))
         canvas.fill(path, [self.color])
-        canvas.stroke(path, [pyx.style.linewidth.THIck])
+        canvas.stroke(path, [pyx.color.rgb.white, pyx.style.linewidth.THICK])
+        canvas.fill(path, [self.color])
+        canvas.stroke(path, [self.stroke, pyx.style.linewidth.THick])
     
     def _draw_text(self, canvas, offset):
         if self._text() is None:
